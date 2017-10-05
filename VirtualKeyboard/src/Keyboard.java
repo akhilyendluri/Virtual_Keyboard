@@ -321,7 +321,7 @@ public class Keyboard{
 		@Override
 		public void mousePressed(MouseEvent e) {
 			// TODO Auto-generated method stub
-			String soundName = "C:\\Users\\yendl\\Downloads\\handbag-lock-8.wav";			
+			String soundName = "..\\VirtualKeyboard\\handbag-lock-8.wav";			
 			if(e.getSource()==b1||e.getSource()==b2||e.getSource()==b3||e.getSource()==back) {
 				JButton jb = (JButton) e.getSource();
 				jb.setFocusPainted(true);

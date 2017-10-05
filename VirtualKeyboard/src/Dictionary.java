@@ -19,7 +19,7 @@ public class Dictionary {
 		
 		wtable = new ArrayList<String>();
 		ftable = new ArrayList<Integer>();
-		Scanner input = new Scanner(new File("C:\\Users\\yendl\\Desktop\\HCI\\Homework - 1\\Source_Code\\VirtualKeyboard\\wordf.txt"));
+		Scanner input = new Scanner(new File("..\\VirtualKeyboard\\wordf.txt"));
 		String buffer = new String("");
 		loadDictionary = new HashMap<>();
 		while(input.hasNext()){	
