@@ -13,6 +13,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.awt.geom.Point2D;
 
@@ -321,7 +322,8 @@ public class Keyboard{
 		@Override
 		public void mousePressed(MouseEvent e) {
 			// TODO Auto-generated method stub
-			String soundName = "..\\VirtualKeyboard\\handbag-lock-8.wav";			
+			String soundName = "/handbag-lock-8.wav";	
+			URL url = Keyboard.class.getResource(soundName);
 			if(e.getSource()==b1||e.getSource()==b2||e.getSource()==b3||e.getSource()==back) {
 				JButton jb = (JButton) e.getSource();
 				jb.setFocusPainted(true);
@@ -331,7 +333,7 @@ public class Keyboard{
 			}			
 			try 
 			   {
-			    AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(soundName));
+			    AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(url);
 			    Clip clip = AudioSystem.getClip( );
 			    clip.open(audioInputStream);
 			    clip.start( );
